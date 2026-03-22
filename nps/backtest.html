@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What If You Followed NPS? Backtest Results — +838% vs SPY +315% | KStockGuide</title>
+  <meta name="description" content="Backtesting NPS 13F data: buying the top 20 stocks by share increase rate returned +838% cumulative vs SPY +315% over 11 years (2014-2025). Full quarter-by-quarter results.">
+  <link rel="canonical" href="https://kstockguide.com/nps/backtest.html">
+
+  <meta property="og:title" content="What If You Followed NPS? — Backtest Results +838%">
+  <meta property="og:description" content="A strategy based on NPS 13F filings returned +838% vs SPY +315% over 11 years. See the data.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kstockguide.com/nps/backtest.html">
+  <meta property="og:site_name" content="KStockGuide">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What If You Followed NPS? — Backtest Results +838%">
+  <meta name="twitter:description" content="A strategy based on NPS 13F filings returned +838% vs SPY +315% over 11 years.">
+
+  <link rel="stylesheet" href="nps-style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3JZ9LSC9H9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3JZ9LSC9H9');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vjb1ph46p9");</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7776849230910580" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What If You Followed NPS? Backtest Results +838%",
+    "description": "Backtesting a strategy based on NPS 13F filings: buying top 20 stocks by share increase rate returned +838% vs SPY +315%.",
+    "url": "https://kstockguide.com/nps/backtest.html",
+    "publisher": {"@type": "Organization", "name": "KStockGuide"},
+    "datePublished": "2026-02-10",
+    "dateModified": "2026-03-22",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kstockguide.com/"},
+        {"@type": "ListItem", "position": 2, "name": "NPS Portfolio", "item": "https://kstockguide.com/nps/"},
+        {"@type": "ListItem", "position": 3, "name": "Backtest Results"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://kstockguide.com/" class="site-logo"><span class="logo-icon">&#x1F4C8;</span> KStockGuide</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+      <nav class="header-nav">
+        <a href="/nps/">NPS Portfolio</a>
+        <a href="/nps/new-buys.html">New Buys</a>
+        <a href="/nps/sold.html">Sold</a>
+        <a href="/nps/movers.html">Movers</a>
+        <a href="/nps/backtest.html" class="active">Backtest</a>
+        <a href="/nps/about-nps.html">About NPS</a>
+        <button class="theme-toggle" aria-label="Toggle theme">&#127769;</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="https://kstockguide.com/">Home</a>
+      <span>&rsaquo;</span>
+      <a href="/nps/">NPS Portfolio</a>
+      <span>&rsaquo;</span>
+      Backtest Results
+    </nav>
+  </div>
+
+  <main class="container content-wrapper">
+    <div class="page-title">
+      <h1>What If You Followed NPS?</h1>
+    </div>
+    <p class="page-description">We backtested a simple strategy: each quarter, buy the top 20 stocks where NPS increased its share count the most (by percentage). Equal-weight the portfolio and hold until the next 13F filing. Here's what happened over 11 years.</p>
+
+    <!-- Key Results -->
+    <div class="stats-grid">
+      <div class="stat-card gain">
+        <span class="stat-value">+837.8%</span>
+        <span class="stat-label">Strategy Cumulative Return</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">+314.9%</span>
+        <span class="stat-label">SPY Cumulative Return</span>
+      </div>
+      <div class="stat-card gain">
+        <span class="stat-value">+523.0pp</span>
+        <span class="stat-label">Alpha Over SPY</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">77.3%</span>
+        <span class="stat-label">Win Rate (34/44 Quarters)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">5.57%</span>
+        <span class="stat-label">Avg Quarterly Return</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">3.42%</span>
+        <span class="stat-label">Avg SPY Quarterly</span>
+      </div>
+    </div>
+
+    <div class="ad-slot">Advertisement</div>
+
+    <!-- Strategy Explanation -->
+    <section class="section">
+      <h2>How the Strategy Works</h2>
+      <div class="info-box mt-16">
+        <h4>Step 1: Identify Conviction Buys</h4>
+        <p style="margin:0;">When a 13F filing is released, we compare share counts to the previous quarter. We select the top 20 stocks where NPS increased shares the most (by percentage). This filters for high-conviction buys.</p>
+      </div>
+      <div class="info-box">
+        <h4>Step 2: Equal-Weight Portfolio</h4>
+        <p style="margin:0;">We buy all 20 stocks in equal weight on the first business day after the filing date. No position sizing optimization &mdash; simple 5% allocation to each stock.</p>
+      </div>
+      <div class="info-box">
+        <h4>Step 3: Hold Until Next Filing</h4>
+        <p style="margin:0;">We hold the portfolio until the next 13F filing date (roughly 3 months). Then we rebalance to the new top 20. This creates roughly 4 rebalances per year.</p>
+      </div>
+    </section>
+
+    <!-- Performance Highlights -->
+    <section class="section">
+      <h2>Performance Highlights</h2>
+
+      <h3 class="mt-24">Best Quarters</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th class="text-right">Strategy</th>
+              <th class="text-right">SPY</th>
+              <th class="text-right">Alpha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q3 2020</td>
+              <td class="text-right gain">+40.0%</td>
+              <td class="text-right">+7.2%</td>
+              <td class="text-right gain">+32.8pp</td>
+            </tr>
+            <tr>
+              <td>Q3 2024</td>
+              <td class="text-right gain">+22.5%</td>
+              <td class="text-right">+7.0%</td>
+              <td class="text-right gain">+15.5pp</td>
+            </tr>
+            <tr>
+              <td>Q4 2014</td>
+              <td class="text-right gain">+21.9%</td>
+              <td class="text-right">+5.2%</td>
+              <td class="text-right gain">+16.7pp</td>
+            </tr>
+            <tr>
+              <td>Q2 2020</td>
+              <td class="text-right gain">+16.6%</td>
+              <td class="text-right">+7.9%</td>
+              <td class="text-right gain">+8.7pp</td>
+            </tr>
+            <tr>
+              <td>Q3 2017</td>
+              <td class="text-right gain">+13.0%</td>
+              <td class="text-right">+9.8%</td>
+              <td class="text-right gain">+3.2pp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="mt-32">Worst Quarters</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th class="text-right">Strategy</th>
+              <th class="text-right">SPY</th>
+              <th class="text-right">Alpha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q4 2021</td>
+              <td class="text-right loss">-13.0%</td>
+              <td class="text-right loss">-10.1%</td>
+              <td class="text-right loss">-2.9pp</td>
+            </tr>
+            <tr>
+              <td>Q4 2019</td>
+              <td class="text-right loss">-8.2%</td>
+              <td class="text-right loss">-5.5%</td>
+              <td class="text-right loss">-2.7pp</td>
+            </tr>
+            <tr>
+              <td>Q4 2017</td>
+              <td class="text-right loss">-6.1%</td>
+              <td class="text-right loss">-3.9%</td>
+              <td class="text-right loss">-2.2pp</td>
+            </tr>
+            <tr>
+              <td>Q2 2015</td>
+              <td class="text-right loss">-6.0%</td>
+              <td class="text-right loss">-3.8%</td>
+              <td class="text-right loss">-2.2pp</td>
+            </tr>
+            <tr>
+              <td>Q3 2015</td>
+              <td class="text-right loss">-5.9%</td>
+              <td class="text-right loss">-6.1%</td>
+              <td class="text-right gain">+0.2pp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="ad-slot">Advertisement</div>
+
+    <!-- Recent Performance -->
+    <section class="section">
+      <h2>Recent Quarter-by-Quarter Results</h2>
+      <div class="table-container mt-16">
+        <table>
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th class="text-right">Strategy</th>
+              <th class="text-right">SPY</th>
+              <th class="text-right">Cumulative (Strategy)</th>
+              <th class="text-right">Cumulative (SPY)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q4 2023</td>
+              <td class="text-right gain">+7.0%</td>
+              <td class="text-right gain">+6.6%</td>
+              <td class="text-right">5.96x</td>
+              <td class="text-right">3.11x</td>
+            </tr>
+            <tr>
+              <td>Q1 2024</td>
+              <td class="text-right gain">+7.0%</td>
+              <td class="text-right gain">+3.0%</td>
+              <td class="text-right">6.38x</td>
+              <td class="text-right">3.20x</td>
+            </tr>
+            <tr>
+              <td>Q2 2024</td>
+              <td class="text-right gain">+6.8%</td>
+              <td class="text-right gain">+4.9%</td>
+              <td class="text-right">6.81x</td>
+              <td class="text-right">3.36x</td>
+            </tr>
+            <tr>
+              <td>Q3 2024</td>
+              <td class="text-right gain">+22.5%</td>
+              <td class="text-right gain">+7.0%</td>
+              <td class="text-right">8.34x</td>
+              <td class="text-right">3.59x</td>
+            </tr>
+            <tr>
+              <td>Q4 2024</td>
+              <td class="text-right loss">-2.6%</td>
+              <td class="text-right loss">-2.8%</td>
+              <td class="text-right">8.13x</td>
+              <td class="text-right">3.49x</td>
+            </tr>
+            <tr>
+              <td>Q1 2025</td>
+              <td class="text-right gain">+4.7%</td>
+              <td class="text-right gain">+8.6%</td>
+              <td class="text-right">8.51x</td>
+              <td class="text-right">3.79x</td>
+            </tr>
+            <tr>
+              <td>Q2 2025</td>
+              <td class="text-right gain">+2.1%</td>
+              <td class="text-right gain">+6.8%</td>
+              <td class="text-right">8.69x</td>
+              <td class="text-right">4.05x</td>
+            </tr>
+            <tr>
+              <td>Q3 2025</td>
+              <td class="text-right gain">+8.0%</td>
+              <td class="text-right gain">+2.4%</td>
+              <td class="text-right">9.38x</td>
+              <td class="text-right">4.15x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-16" style="font-size:0.85rem;color:var(--text-muted);">A $10,000 investment in 2014 would have grown to approximately $93,800 using this strategy, compared to $41,500 in SPY.</p>
+    </section>
+
+    <!-- Why It Works -->
+    <section class="section">
+      <h2>Why This Might Work</h2>
+      <div class="info-box mt-16">
+        <h4>Informed Signal</h4>
+        <p style="margin:0;">NPS employs hundreds of analysts and external advisors. When they significantly increase a position, it likely reflects deep research and institutional conviction that individual investors rarely have access to.</p>
+      </div>
+      <div class="info-box">
+        <h4>Delayed Information Advantage</h4>
+        <p style="margin:0;">While 13F filings are delayed by 45 days, the institutional thesis behind a large share increase often plays out over quarters, not days. The signal remains actionable even with the delay.</p>
+      </div>
+      <div class="info-box">
+        <h4>Behavioral Edge</h4>
+        <p style="margin:0;">Large pension funds like NPS tend to avoid panic selling and have multi-year investment horizons. Their increases often align with long-term value creation rather than short-term momentum.</p>
+      </div>
+    </section>
+
+    <div class="ad-slot">Advertisement</div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <strong>Important Disclaimer:</strong> This backtest is for educational and informational purposes only. It does <strong>not</strong> constitute investment advice, a recommendation, or a solicitation to buy or sell securities.
+      <br><br>
+      <strong>Key limitations:</strong>
+      <ul style="margin-top:8px;padding-left:20px;">
+        <li>Past performance does not guarantee future results.</li>
+        <li>The backtest does not account for transaction costs, slippage, taxes, or liquidity constraints.</li>
+        <li>13F filings have a 45-day delay and may not reflect current NPS positions.</li>
+        <li>Survivorship bias and look-ahead bias may affect results.</li>
+        <li>The strategy may not be replicable in practice due to position sizing and market impact.</li>
+        <li>NPS ticker mappings may have errors for older quarters, which could affect early-period results.</li>
+      </ul>
+      <br>
+      Always conduct your own research and consult a qualified financial advisor before making investment decisions.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-about">
+          <h4>KStockGuide</h4>
+          <p>Tracking institutional investors' US stock portfolios through SEC 13F filings.</p>
+        </div>
+        <div class="footer-links">
+          <h4>NPS Portfolio</h4>
+          <ul>
+            <li><a href="/nps/">Overview</a></li>
+            <li><a href="/nps/new-buys.html">New Buys</a></li>
+            <li><a href="/nps/sold.html">Sold Positions</a></li>
+            <li><a href="/nps/movers.html">Biggest Movers</a></li>
+            <li><a href="/nps/backtest.html">Backtest Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/nps/about-nps.html">About NPS</a></li>
+            <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001608046&type=13F" target="_blank" rel="noopener">SEC EDGAR Filings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 KStockGuide. All rights reserved. Not financial advice.</div>
+    </div>
+  </footer>
+  <script src="nps-main.js"></script>
+</body>
+</html>
